@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { FileText, CheckCircle2, ChevronDown, ChevronRight, Terminal, Globe2, Video, BookOpen, Download, ExternalLink } from 'lucide-react';
+import { FileText, CheckCircle2, ChevronDown, ChevronRight, Terminal, Globe2, BookOpen, Download, ExternalLink } from 'lucide-react';
 
 export const ProjectDocumentation: React.FC = () => {
   const [expandedStep, setExpandedStep] = useState<number | null>(1);
@@ -220,35 +220,6 @@ GitHub: https://github.com/Yashika0704/FORMULA-1-Race-Intelligence-Dashboard-Ana
         </div>
       </div>
 
-      {/* Demo Video Placeholder */}
-      <div className="bg-[#141822] border border-white/10 rounded-xl p-4 lg:p-6 space-y-4">
-        <div className="flex items-center gap-2 border-b border-white/10 pb-3">
-          <Video className="w-5 h-5 text-[#E10600]" />
-          <h3 className="text-sm font-bold text-white uppercase tracking-wider">Project Explanation Video</h3>
-        </div>
-        <div className="bg-[#0b0e14] border border-white/10 rounded-xl p-8 flex flex-col items-center justify-center gap-4 text-center min-h-[200px]">
-          <div className="w-16 h-16 rounded-full bg-[#E10600]/10 border border-[#E10600]/30 flex items-center justify-center">
-            <Video className="w-8 h-8 text-[#E10600]" />
-          </div>
-          <div>
-            <h4 className="text-base font-bold text-white">End-to-End Project Walkthrough</h4>
-            <p className="text-xs text-slate-400 mt-1 max-w-md">
-              Record a screen recording of the live dashboard demonstrating: data filters, story navigation, chart interactions, CSV export, and the Tableau Public portal.
-            </p>
-          </div>
-          <div className="flex items-center gap-2 flex-wrap justify-center">
-            <span className="px-3 py-1.5 rounded-lg text-xs font-mono bg-amber-950/60 border border-amber-500/30 text-amber-400">
-              🎥 Recommended: OBS Studio / Loom / Screen Recorder
-            </span>
-            <span className="px-3 py-1.5 rounded-lg text-xs font-mono bg-white/5 border border-white/10 text-slate-300">
-              Duration: 5–10 minutes
-            </span>
-          </div>
-          <div className="text-xs text-slate-500 font-mono">
-            Upload to YouTube / Google Drive, then add the link via the "Add Demo Link" button on the Skill Wallet platform.
-          </div>
-        </div>
-      </div>
 
       {/* Step by Step Procedure */}
       <div className="bg-[#141822] border border-white/10 rounded-xl p-4 lg:p-6 space-y-4">
