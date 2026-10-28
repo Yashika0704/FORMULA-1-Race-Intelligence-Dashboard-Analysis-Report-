@@ -13,6 +13,8 @@ import { PodiumAchievementsChart } from './components/charts/PodiumAchievementsC
 import { TableauStoryViewer } from './components/story/TableauStoryViewer';
 import { DataDictionaryModal } from './components/DataDictionaryModal';
 import { TableauPublicModal } from './components/TableauPublicModal';
+import { PerformanceTesting } from './components/PerformanceTesting';
+import { ProjectDocumentation } from './components/ProjectDocumentation';
 import { FilterState } from './types/f1';
 import { computeAnalytics, downloadFilteredCsv } from './utils/analytics';
 import { SEASONS } from './data/f1Data';
@@ -28,7 +30,7 @@ const INITIAL_FILTERS: FilterState = {
 };
 
 export default function App() {
-  const [activeTab, setActiveTab] = useState<'dashboard' | 'story' | 'datamodel' | 'tableau_public'>('dashboard');
+  const [activeTab, setActiveTab] = useState<'dashboard' | 'story' | 'datamodel' | 'tableau_public' | 'performance' | 'documentation'>('dashboard');
   const [filters, setFilters] = useState<FilterState>(INITIAL_FILTERS);
 
   // Compute filtered analytics
@@ -151,6 +153,12 @@ export default function App() {
 
         {/* Tableau Public Portal & Verified Link */}
         {activeTab === 'tableau_public' && <TableauPublicModal />}
+
+        {/* Performance Testing */}
+        {activeTab === 'performance' && <PerformanceTesting />}
+
+        {/* Project Documentation */}
+        {activeTab === 'documentation' && <ProjectDocumentation />}
       </main>
 
       {/* Footer */}

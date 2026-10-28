@@ -1,9 +1,9 @@
 import React from 'react';
-import { LayoutDashboard, BookOpen, Database, Share2, RotateCcw, Trophy, Activity, Globe2, Download } from 'lucide-react';
+import { LayoutDashboard, BookOpen, Database, Share2, RotateCcw, Download, Activity, FileText } from 'lucide-react';
 
 interface HeaderProps {
-  activeTab: 'dashboard' | 'story' | 'datamodel' | 'tableau_public';
-  setActiveTab: (tab: 'dashboard' | 'story' | 'datamodel' | 'tableau_public') => void;
+  activeTab: 'dashboard' | 'story' | 'datamodel' | 'tableau_public' | 'performance' | 'documentation';
+  setActiveTab: (tab: 'dashboard' | 'story' | 'datamodel' | 'tableau_public' | 'performance' | 'documentation') => void;
   onResetFilters: () => void;
   hasActiveFilters: boolean;
   onExport?: () => void;
@@ -91,6 +91,30 @@ export const Header: React.FC<HeaderProps> = ({
           >
             <Share2 className="w-3.5 h-3.5" />
             <span>Tableau Public Portal</span>
+          </button>
+
+          <button
+            onClick={() => setActiveTab('performance')}
+            className={`flex items-center gap-2 px-3 py-1.5 text-xs font-medium rounded-md transition-all whitespace-nowrap ${
+              activeTab === 'performance'
+                ? 'bg-orange-500/20 text-orange-400 border border-orange-500/40'
+                : 'text-slate-400 hover:text-white hover:bg-white/5'
+            }`}
+          >
+            <Activity className="w-3.5 h-3.5" />
+            <span>Performance Testing</span>
+          </button>
+
+          <button
+            onClick={() => setActiveTab('documentation')}
+            className={`flex items-center gap-2 px-3 py-1.5 text-xs font-medium rounded-md transition-all whitespace-nowrap ${
+              activeTab === 'documentation'
+                ? 'bg-purple-500/20 text-purple-400 border border-purple-500/40'
+                : 'text-slate-400 hover:text-white hover:bg-white/5'
+            }`}
+          >
+            <FileText className="w-3.5 h-3.5" />
+            <span>Documentation</span>
           </button>
         </div>
 
