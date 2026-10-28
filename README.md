@@ -17,6 +17,8 @@ It presents racing data in a simple and interactive way to help users understand
 - React
 - TypeScript
 - Vite
+- Tailwind CSS
+- Google Gemini AI (`@google/genai`)
 - Data Visualization
 
 ## 🚀 Getting Started
@@ -24,34 +26,42 @@ It presents racing data in a simple and interactive way to help users understand
 ### Prerequisites
 - Node.js
 - npm
+- A [Gemini API Key](https://aistudio.google.com/app/apikey)
 
 ### Installation
 
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/amiteshsathua07/Formula-1.git
+   git clone https://github.com/Yashika0704/FORMULA-1-Race-Intelligence-Dashboard-Analysis-Report-.git
    ```
 
 2. Navigate to the project folder:
 
    ```bash
-   cd Formula-1
+   cd FORMULA-1-Race-Intelligence-Dashboard-Analysis-Report-
    ```
 
 3. Install dependencies:
 
    ```bash
-   npm install
+   npm install --legacy-peer-deps
    ```
 
-4. Start the development server:
+4. Set up your environment variables:
+
+   ```bash
+   cp .env.example .env
+   ```
+   Then open `.env` and replace `MY_GEMINI_API_KEY` with your actual Gemini API key.
+
+5. Start the development server:
 
    ```bash
    npm run dev
    ```
 
-5. Open the local URL shown in your terminal.
+6. Open **http://localhost:5173** in your browser.
 
 ## 🎯 Project Objective
 The main objective of this project is to transform Formula 1 racing data into meaningful insights through data analysis and visualization.
@@ -62,10 +72,10 @@ The main objective of this project is to transform Formula 1 racing data into me
 - Historical race analysis
 - Improved dashboard visualizations
 
-## 👨‍💻 Author
-**Amitesh Sathua**
+## 👩‍💻 Author
+**Yashika**
 
-GitHub: [@amiteshsathua07](https://github.com/amiteshsathua07)
+GitHub: [@Yashika0704](https://github.com/Yashika0704)
 
 ---
 
